@@ -1,0 +1,8 @@
+<div *ngIf="spirtes" class="game-pane" [style.width.px]="width*30">
+    <mat-grid-list [cols]="width" rowHeight="30px">
+        <mat-grid-tile *ngFor='let in of counter((height*width)) ;let i = index'>
+            <mat-icon *ngIf="checkIfExists(i)">bug_report</mat-icon>
+            <mat-icon *ngIf="playerPosition==i">face</mat-icon>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
